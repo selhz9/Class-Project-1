@@ -6,7 +6,7 @@ Bootcamp Sep. 2024
 As a web development students,
 We want a funny and simple game
 SO THAT we can get fun playing cards on the computer
-
+ 
 ## Acceptance Criteria 
 
 Given the card game
