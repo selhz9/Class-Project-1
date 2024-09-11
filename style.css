@@ -1,56 +1,96 @@
+:root {
+  --yellow: #FFC596;
+  --orange: #FFB375;
+  --gray: #767575;
+  --medium-gray: #606060;
+  --dark-gray: #383C3C;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+html {
+  font-size: 16px; 
+  height: 100%; 
+  margin: 0;
+}
 
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            font-size: 2rem;
-            font-weight: bold;
-        }
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: var(--yellow);
+  height: 100%; 
+  margin: 0; 
+}
 
-        section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+header {
+  background-color: var(--dark-gray);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
 
-        form {
-            display: flex;
-            flex-direction: column;
-            margin-top: 1rem;
-        }
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 1rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  flex: 1; 
+}
 
-        label {
-            margin: 0.5rem 0;
-        }
+article {
+  flex: 1 1 300px; /* flex-grow, flex-shrink, and base width /
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: white;
+  border: 2px solid var(--medium-gray);
+  min-width: 200px;
+  max-width: calc(33.333% - 1rem); / added this with chat gpt idk if its right--> Ensure up to 3 articles fit in a row, minus gap */
+}
 
-        input[type="text"] {
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-        }
+article h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
 
-        input[type="submit"] {
-            padding: 0.75rem;
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+article p {
+  font-size: 1rem; 
+  line-height: 1.5; 
+}
 
-        footer {
-            background-color: #f4f4f4;
-            padding: 1rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #555;
-        }
-    </style>
-</head>
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
 
-<body>
+label {
+  margin: 0.5rem 0;
+}
+
+input[type="text"], input[type="file"], input[type="submit"] {
+  font-size: 1rem; 
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="submit"] {
+  padding: 0.75rem;
+  background-color: var(--medium-gray);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--gray);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
