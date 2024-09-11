@@ -222,8 +222,6 @@ window.onload = function() {
 	$("#year").html(new Date().getFullYear());
 };
 
-//custom function, used with animate.css to quickly add and then remove animation classes (once animation is finished)
-//found here: https://github.com/daneden/animate.css
 $.fn.extend({
 	animateCss: function(animationName, callback) {
 		var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
