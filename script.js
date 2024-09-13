@@ -225,10 +225,3 @@ $.fn.extend({
 	}
 });
 
-// //function to preload images into the browser cache for quicker loading during play
-// function preloadImages() {
-// 	for (var i = 0; i < 52; i++) {
-// 		var img = new Image();
-// 		img.src = 'img/cards/'+i+'.png';
-// 	}
-// }
