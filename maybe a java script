@@ -1,0 +1,139 @@
+const avatarUrls = [
+  "path/to/avatar1.png",
+  "path/to/avatar2.jpg",
+  "path/to/avatar3.svg",
+];
+
+const avatarImage = document.getElementById("avatar-image");
+
+function chooseAvatar() {
+  const selectedAvatar = document.querySelector('input[name="avatar"]:checked');
+  if (selectedAvatar) {
+    localStorage.setItem('avatar', selectedAvatar.value);
+    const avatarPreview = document.getElementById('avatar-preview');
+    avatarPreview.src = selectedAvatar.value;
+  }
+}
+
+function displayAvatar() {
+  const storedAvatar = localStorage.getItem('avatar');
+  if (storedAvatar) {
+    const avatarPreview = document.getElementById('avatar-preview');
+    avatarPreview.src = storedAvatar;
+  }
+}
+
+displayAvatar();
+
+let playerHand = [];
+let compHand = [];
+let warArray = [];
+
+function displayCards() {
+  const playerCard = document.createElement('img');
+  playerCard.src = "img/cards/" + playerHand[0] + ".png";
+
+  const compCard = document.createElement('img');
+  compCard.src = "img/cards/" + compHand[0] + ".png";
+
+  $('.playerCard').append(playerCard).animateCss("flipInYRev");
+  $('.compCard').append(compCard).animateCss("flipInY");
+
+  compare(playerHand[0], compHand[0]);
+}
+
+function compare(player, comp) {
+  if ((player % 13) > (comp % 13)) {
+    $('.result').html("Player wins!").animateCss("flipInX");
+    playerHand.push(compHand.shift());
+  } else if ((player % 13) < (comp % 13)) {
+    $('.result').html("Computer wins!").animateCss("flipInX");
+    compHand.push(playerHand.shift());
+  } else {
+    war();
+  }
+}
+
+function war() {
+  $('#warAnimation').addClass('war').show().css("display", "table");
+  $("#warText").animateCss("lightSpeedIn", function() {
+    $("#warText").animateCss("lightSpeedOut");
+  });
+
+  setTimeout(() => {
+    $('#warAnimation').removeClass('war').hide();
+    $("#warText").removeClass("lightSpeedOut");
+    $("#warArea").show();
+    warToArray();
+  }, 2000);
+}
+
+function warToArray() {
+  const length = Math.min(playerHand.length, compHand.length, 4);
+  for (let i = 0; i < length; i++) {
+    warArray.push(playerHand.shift());
+    warArray.push(compHand.shift());
+  }
+}
+
+function compareWar(player, comp) {
+  warArray.length = 0;
+  if ((player % 13) < (comp % 13)) {
+    $('.result').html("Computer wins the war!").animateCss("flipInX");
+    compHand.push(...warArray);
+  } else if ((player % 13) > (comp % 13)) {
+    $('.result').html("Player wins the war!").animateCss("flipInX");
+    playerHand.push(...warArray);
+  }
+
+  setTimeout(() => {
+    moveCards("compWar");
+    moveCards("comp");
+    $("#warArea").hide();
+    updateCount();
+    checkWin();
+  }, 3000);
+}
+
+function moveCards(winner) {
+  if (winner === "player") {
+    $(".playerCard img").animate({ left: '-2000px' }, function() { $(this).hide(); });
+    $(".compCard img").animate({ left: '-2000px' }, function() { $(this).hide(); });
+  } else if (winner === "comp") {
+    $(".playerCard img").animate({ left: '2000px' }, function() { $(this).hide(); });
+    $(".compCard img").animate({ left: '2000px' }, function() { $(this).hide(); });
+  }
+}
+
+function checkWin() {
+  if (playerHand.length === 0) {
+    alert("Computer wins. :(");
+    $('.result').html("The computer wins the game :(").animateCss("flipInX");
+    $('.playerCard').html("");
+  } else if (compHand.length === 0) {
+    alert("Player wins!! :D");
+    $('.result').html("You won the game! :)").animateCss("flipInX");
+    $('.compCard').html("");
+    $('#dealButton').hide();
+  }
+}
+
+function updateCount() {
+  $('.playCount').html("Player cards: " + playerHand.length);
+  $('.compCount').html("Computer cards: " + compHand.length);
+}
+
+function hideAll() {
+  $("#jumbotron, #desktop, #gameboard, #howToPlay, #header, .newGame").hide();
+}
+
+$.fn.extend({
+  animateCss: function(animationName, callback) {
+    const animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    this.addClass('animated ' + animationName).one(animationEnd, function() {
+      $(this).removeClass('animated ' + animationName);
+      if (callback) callback();
+    });
+    return this;
+  }
+});
