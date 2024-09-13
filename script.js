@@ -210,17 +210,7 @@ function updateCount() {
 // 	$(".newGame").hide();
 // }
 
-window.onload = function() {
 
-	preloadImages();
-
-	hideAll();
-	$("#jumbotron").show();
-	$("#howToPlay").show();
-	fillArray();
-
-	$("#year").html(new Date().getFullYear());
-};
 
 $.fn.extend({
 	animateCss: function(animationName, callback) {
