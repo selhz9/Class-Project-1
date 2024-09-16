@@ -11,17 +11,13 @@ const avatarUrls = [
 const themeSwitcher = document.querySelector('#theme-switcher');
 const container = document.querySelector('.container');
 
-// Set default mode to dark
 let mode = 'dark';
 
-// Listen for a click event on toggle switch
 themeSwitcher.addEventListener('click', function () {
-  // If mode is dark, apply light background
   if (mode === 'dark') {
     mode = 'light';
     container.setAttribute('class', 'light');
   }
-  // If mode is light, apply dark background
   else {
     mode = 'dark';
     container.setAttribute('class', 'dark');
@@ -100,9 +96,7 @@ const computerDeckElement = document.querySelector(".computer-deck")
 const playerDeckElement = document.querySelector(".player-deck")
 const text = document.querySelector(".text")
   
-// Get a reference to the image element
-  const avatarImage = document.getElementById("avatar-image");                                                                                             function chooseAvatar() {
-    // Get the selected avatar image element
+  const avatarImage = document.getElementById("avatar-image");                                                                                             function chooseAvatar() { 
     const selectedAvatar = document.querySelector('input[name="avatar"]:checked');
   
     if (selectedAvatar) {
