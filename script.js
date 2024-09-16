@@ -76,8 +76,13 @@ function freshDeck() {
     })
   })
 }
-
-  // Get a reference to the image element
+const computerCardSlot = document.querySelector(".computer-card-slot")
+const playerCardSlot = document.querySelector(".player-card-slot")
+const computerDeckElement = document.querySelector(".computer-deck")
+const playerDeckElement = document.querySelector(".player-deck")
+const text = document.querySelector(".text")
+  
+// Get a reference to the image element
   const avatarImage = document.getElementById("avatar-image");                                                                                             function chooseAvatar() {
     // Get the selected avatar image element
     const selectedAvatar = document.querySelector('input[name="avatar"]:checked');
