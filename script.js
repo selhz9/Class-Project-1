@@ -276,19 +276,6 @@ function updateCount() {
 	$('.compCount').html("Computer cards: " + compHand.length);
 }
 
-
-//simple function to hide big page elements, usually followed by showing other specific elements
-// function hideAll() {
-// 	$("#jumbotron").hide();
-// 	$("#desktop").hide();
-// 	$("#gameboard").hide();
-// 	$("#howToPlay").hide();
-// 	$("#header").hide();
-// 	$(".newGame").hide();
-// }
-
-
-
 $.fn.extend({
 	animateCss: function(animationName, callback) {
 		var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
