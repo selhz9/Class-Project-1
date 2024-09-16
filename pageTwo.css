@@ -1,0 +1,135 @@
+:root {
+    --yellow: #FFC596;
+    --orange: #FFB375;
+    --gray: #767575;
+    --medium-gray: #606060;
+    --dark-gray: #383C3C;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0; 
+    display: flex;
+    flex-direction: column; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--yellow);
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+}
+
+header {
+    background-color: var(--dark-gray);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.game-board {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em auto;
+    width: 80%;
+    max-width: 1000px;
+    flex: 1; 
+}
+
+.player-area {
+    flex: 1;
+    text-align: center;
+}
+
+.player-area h2 {
+    font-size: 2rem; 
+    margin-bottom: 0.5em; 
+    color: var(--dark-gray); 
+}
+
+.card {
+    margin-top: 1em;
+    font-size: 3em;
+    background-color: #fff;
+    border: 2px solid #ddd; 
+    padding: 1em; 
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    line-height: 300px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
+}
+
+.draw-button-container {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+#drawButton {
+    font-size: 1.5em;
+    padding: 0.5em 2em;
+}
+
+.player-area p {
+    margin-top: 2em;
+}
+
+.status {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+footer {
+    background-color: var(--gray);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: white;
+}
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAR: The Card Game</title>
+    <link rel="stylesheet" href="./assets/css/style2.css">
+    <script defer src="./assets/js/javascript.js" type="text/javascript"></script>
+</head>
+<body>
+    <header>WAR: THE CARD GAME</header>
+
+    <div class="game-board">
+        <div class="player-area" id="playerCardArea">
+            <h2>Your Card</h2>
+            <div class="card" id="playerCard">?</div>
+            <p>Your Deck: <span id="playerDeckCount">26</span></p>
+        </div>
+
+        <div class="draw-button-container">
+            <button id="drawButton">Draw Card</button>
+        </div>
+
+        <div class="player-area" id="computerCardArea">
+            <h2>Computer's Card</h2>
+            <div class="card" id="computerCard">?</div>
+            <p>Computer's Deck: <span id="computerDeckCount">26</span></p>
+        </div>
+    </div>
+
+    <div class="status">
+        <p id="statusMessage">Click "Draw Card" to start the game!</p>
+    </div>
+
+    <footer>
+        <p>Created by Sarah Hantz, Hannah Myers, Gabriel Cisneros, and Arica Hyman.</p>
+    </footer>
+
+</body>
+</html>
