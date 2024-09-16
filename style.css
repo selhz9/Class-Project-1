@@ -17,8 +17,8 @@ body {
   flex-direction: column;
   font-family: Arial, sans-serif;
   background-color: var(--yellow);
-  height: 100%; 
-  margin: 0; 
+  height: 100%;
+  margin: 0;
 }
 
 header {
@@ -33,7 +33,7 @@ header {
 main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding: 2rem;
   gap: 1rem;
   max-width: 1500px;
@@ -45,7 +45,7 @@ main {
 article {
   flex: 1 1 300px; /* flex-grow, flex-shrink, and base width /
   padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   border-radius: 5px;
   background-color: white;
   border: 2px solid var(--medium-gray);
