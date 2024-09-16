@@ -1,5 +1,5 @@
 :root {
-  --yellow: #FFC596;
+  --yellow: #FFC596; 
   --orange: #FFB375;
   --gray: #767575;
   --medium-gray: #606060;
@@ -43,14 +43,14 @@ main {
 }
 
 article {
-  flex: 1 1 300px; /* flex-grow, flex-shrink, and base width /
+  flex: 1 1 300px; 
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   border-radius: 5px;
   background-color: white;
   border: 2px solid var(--medium-gray);
   min-width: 200px;
-  max-width: calc(33.333% - 1rem); / added this with chat gpt idk if its right--> Ensure up to 3 articles fit in a row, minus gap */
+  max-width: calc(33.333% - 1rem); 
 }
 
 article h2 {
