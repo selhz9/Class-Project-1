@@ -30,45 +30,45 @@ header {
 
 .game-board {
     display: flex;
-    justify-content: space-between; /* Space between the left and right areas /
-    align-items: center; / Center items vertically /
+    justify-content: space-between; 
+    align-items: center; 
     margin: 2em auto;
     width: 80%;
     max-width: 1000px;
 }
 
 .player-area {
-    flex: 1; / Allow to grow and shrink as needed /
+    flex: 1; 
     text-align: center;
 }
 
 
 #playerCardArea {
-    order: 1; / Ensure player card area is on the left /
+    order: 1; 
 }
 
 #computerCardArea {
-    order: 3; / Ensure computer card area is on the right /
+    order: 3; 
 }
 
 .draw-button-container {
     display: flex;
     flex-direction: column;
-    align-items: center; / Center items horizontally /
-    justify-content: center; / Center items vertically /
-    flex: 1; / Take up remaining space in the middle /
+    align-items: center;
+    justify-content: center; 
+    flex: 1; 
 }
 
 #avatarContainer {
     display: flex;
-    justify-content: center; / Center image horizontally /
-    margin-bottom: 1em; / Space between image and button /
+    justify-content: center; 
+    margin-bottom: 1em;
 }
 
 #teamAvatar {
     width: 200px;
     height: 200px;
-    object-fit: cover; / Ensures the image covers the dimensions, cropping if necessary /
+    object-fit: cover; 
     border: 1px solid #ddd;
     border-radius: 8px;
 }
@@ -99,10 +99,10 @@ header {
 }
 
 #statusMessage {
-    font-size: 1.5em; / Adjust this value to make the text bigger /
-    font-weight: bold; / Makes the text bold /
-    margin-top: 1em; / Adjust spacing from the elements above /
-    margin-bottom: 1em; / Adjust spacing from the elements below */
+    font-size: 1.5em; 
+    font-weight: bold; 
+    margin-top: 1em; 
+    margin-bottom: 1em; 
 }
 
 footer {
