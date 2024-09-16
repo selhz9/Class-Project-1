@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem("teamName", teamName);
             localStorage.setItem("avatar", fileReader.result);
             
-            window.location.href = "index2.html";
+            window.location.href = "page2.html";
         };
         
         if (file) {
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             localStorage.setItem("teamName", teamName);
             localStorage.setItem("avatar", "");
-            window.location.href = "index2.html";
+            window.location.href = "page2.html";
         }
     });
 });
