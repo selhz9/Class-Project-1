@@ -17,9 +17,7 @@ SO THAT we can get fun playing cards on the computer
 - When the form submits,
 - Then I am redirected to the game page.
 - When I view the game page,
-- Then I am presented with a header , with a light mode/dark mode toggle.
-- When I click the light mode/dark mode toggle,
-- Then the page content's styles update to reflect the selection.
+- Then I am presented with a header.
 - When I view the body of the page,
 - Then I am presented with my team name and avatar that are pulled from localstorage, with the opponent team name and his avatar, and two 'Click to draw!' bottoms so I can start playing the game.
 - When I view the localstorage,
