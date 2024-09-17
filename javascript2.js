@@ -116,7 +116,7 @@ function compare(playerCard, compCard) {
 }
 
 function war() {
-    alert("It's a tie! Going to war...");
+    alert("It's a tie! War!");
 
     setTimeout(() => {
         warToArray();
@@ -160,9 +160,9 @@ function compareWar(playerCard, compCard) {
 function checkWin() {
     if (playerHand.length === 0) {
         alert("Computer wins. :(");
-        document.querySelector('.result').textContent = "The computer wins the game. :(";
+        document.querySelector('.result').textContent = "The computer wins the game!";
     } else if (compHand.length === 0) {
-        alert("Player wins!! :D");
+        alert("Player wins! :)");
         document.querySelector('.result').textContent = "You won the game! :)";
     }
 }
