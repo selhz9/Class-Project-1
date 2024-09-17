@@ -1,0 +1,133 @@
+:root {
+    --yellow: #FFC596;
+    --orange: #FFB375;
+    --gray: #767575;
+    --medium-gray: #606060;
+    --dark-gray: #383C3C;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0; 
+    display: flex;
+    flex-direction: column; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--yellow);
+    text-align: center;
+}
+
+header {
+    background-color: var(--dark-gray);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.game-board {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 2em auto;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.player-area {
+    flex: 1; 
+    text-align: center;
+}
+
+
+#playerCardArea {
+    order: 1; 
+}
+
+#computerCardArea {
+    order: 3; 
+}
+
+.draw-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    flex: 1; 
+}
+
+#avatarContainer {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 1em;
+}
+
+#teamAvatar {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#drawButton {
+    font-size: 1.5em;
+    padding: 0.5em 2em;
+}
+
+.card {
+    margin-top: 0.5em;
+    font-size: 3em;
+    background-color: #fff;
+    border: 2px solid #ddd; 
+    padding: 1em; 
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    line-height: 300px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
+}
+
+.status {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#statusMessage {
+    font-size: 1.5em; 
+    font-weight: bold; 
+    margin-top: 1em; 
+    margin-bottom: 1em; 
+}
+
+footer {
+    background-color: var(--gray);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: white;
+}
+
+
+.mode-toggle-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--dark-gray);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 1000;
+}
+
+.mode-toggle-button:hover {
+    background-color: var(--medium-gray);
+}
