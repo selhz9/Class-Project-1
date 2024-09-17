@@ -162,7 +162,7 @@ function checkWin() {
         alert("Computer wins. :(");
         document.querySelector('.result').textContent = "The computer wins the game!";
     } else if (compHand.length === 0) {
-        alert("Player wins! :)");
+        alert("You win! :)");
         document.querySelector('.result').textContent = "You won the game! :)";
     }
 }
